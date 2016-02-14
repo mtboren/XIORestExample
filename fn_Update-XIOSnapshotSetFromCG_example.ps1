@@ -60,7 +60,8 @@ function Get-BasicAuthStringFromCredential {
 
 
 
-<# fundamentals:
+<#
+fundamentals:
 	JSON creation from data structure (instead of trying to craft JSON strings manually)
 	Creds handling
 	Certificates
@@ -73,4 +74,8 @@ function Get-BasicAuthStringFromCredential {
 		pre-POST validation:  ensure that source Consistency Group and destination SnapshotSet exist
 		add ShouldProccess() support ("-WhatIf" support)
 		return meaningful objects upon success, not just some HREFs
+
+to further understand:
+	this Update does:  updates given snapshotset from orig CG, and optionally makes new snapshotset that is a copy of the given snapshotset before refresh?  Or, the new snapshotset is the updated-from-CG item, and if doing -Backup, that leaves the original snapshotset in place?
+
 #>
